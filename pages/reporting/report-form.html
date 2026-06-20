@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إبلاغ - خطوة أمان</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="./reporting.css">
+</head>
+<body data-page="reporting">
+  <div class="app-frame">
+
+    <header class="top-bar">
+      <button class="btn-text" onclick="goBack()">→</button>
+      <span class="top-bar__title">إرسال بلاغ</span>
+      <span style="width:24px"></span>
+    </header>
+
+    <main class="screen">
+
+      <form id="reportForm">
+
+        <h3>نوع البلاغ</h3>
+        <div class="report-type-grid">
+          <label class="report-type">
+            <input type="radio" name="reportType" value="reckless_driver" required>
+            <span class="report-type__icon">🚗</span>
+            <span>سائق متهور</span>
+          </label>
+          <label class="report-type">
+            <input type="radio" name="reportType" value="broken_signal">
+            <span class="report-type__icon">🚥</span>
+            <span>إشارة تالفة</span>
+          </label>
+          <label class="report-type">
+            <input type="radio" name="reportType" value="dangerous_bump">
+            <span class="report-type__icon">⚠️</span>
+            <span>مطب خطير</span>
+          </label>
+          <label class="report-type">
+            <input type="radio" name="reportType" value="accident">
+            <span class="report-type__icon">🚨</span>
+            <span>حادث يحتاج تدخل</span>
+          </label>
+          <label class="report-type">
+            <input type="radio" name="reportType" value="other">
+            <span class="report-type__icon">📌</span>
+            <span>أخرى</span>
+          </label>
+        </div>
+
+        <h3>الموقع</h3>
+        <button type="button" class="btn btn-outline" id="autoLocationBtn">📍 تحديد الموقع تلقائيًا</button>
+        <div class="map-placeholder small">
+          <p>سيظهر الموقع المحدد هنا</p>
+        </div>
+
+        <h3>صورة (اختياري)</h3>
+        <label class="upload-box" for="photoInput">
+          <span class="upload-box__icon">📷</span>
+          <span>إضافة صورة</span>
+          <input type="file" id="photoInput" accept="image/*" class="visually-hidden">
+        </label>
+
+        <div class="field">
+          <label for="description">وصف الحالة (اختياري)</label>
+          <textarea id="description" rows="3" placeholder="اكتب وصفًا مختصرًا..."></textarea>
+        </div>
+
+        <label class="anonymous-toggle">
+          <input type="checkbox" id="anonymousCheck">
+          <span>إرسال بدون ذكر اسمي</span>
+        </label>
+
+        <button type="submit" class="btn btn-danger report-submit-btn">إرسال البلاغ</button>
+
+      </form>
+
+    </main>
+
+  </div>
+
+  <script src="../../js/storage.js"></script>
+  <script src="../../js/navigation.js"></script>
+  <script src="./reporting.js"></script>
+</body>
+</html>

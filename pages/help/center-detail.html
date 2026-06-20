@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تفاصيل المركز - خطوة أمان</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="./help.css">
+</head>
+<body data-page="help">
+  <div class="app-frame">
+
+    <header class="top-bar">
+      <button class="btn-text" onclick="goBack()">→ رجوع</button>
+      <span class="top-bar__title">تفاصيل المركز</span>
+      <span style="width:24px"></span>
+    </header>
+
+    <main class="screen">
+
+      <div class="center-detail__icon" id="centerIcon">🏥</div>
+      <h2 id="centerName">مستشفى الأمل العام</h2>
+      <span class="badge badge-primary" id="centerType">مستشفى عام</span>
+
+      <div class="center-detail__info-block card">
+        <div class="info-row">
+          <span class="info-row__icon">📍</span>
+          <div>
+            <strong>العنوان</strong>
+            <p id="centerAddress">شارع الجمهورية، المنطقة الوسطى</p>
+            <a href="#" id="mapsLink" class="btn-text" target="_blank" rel="noopener">فتح في خرائط جوجل</a>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="info-row__icon">📞</span>
+          <div>
+            <strong>الهاتف</strong>
+            <p id="centerPhone">19999</p>
+            <a href="tel:19999" id="phoneLink" class="btn-text">اتصال مباشر</a>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="info-row__icon">🕐</span>
+          <div>
+            <strong>أوقات العمل</strong>
+            <p id="centerHours">يعمل على مدار 24 ساعة، طوال أيام الأسبوع</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>عن المركز</h3>
+      <p id="centerDescription">يقدم المستشفى خدمات طوارئ متكاملة على مدار الساعة.</p>
+
+      <a class="btn btn-danger" id="mainCallBtn" href="tel:19999">📞 اتصال الآن</a>
+      <button class="btn btn-outline" id="shareCenterBtn">مشاركة بيانات المركز</button>
+
+    </main>
+
+  </div>
+
+  <script src="../../js/navigation.js"></script>
+  <script src="./center-detail.js"></script>
+</body>
+</html>

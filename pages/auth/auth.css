@@ -1,0 +1,68 @@
+/* Auth Screens (Login / Signup) - shared styles */
+
+.auth {
+  padding: var(--space-xl) var(--space-md);
+  min-height: 100vh;
+}
+
+.auth__back {
+  margin-bottom: var(--space-md);
+}
+
+.auth__header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.auth__logo {
+  font-size: 3rem;
+  margin-bottom: var(--space-sm);
+}
+
+.auth__form .btn {
+  margin-top: var(--space-sm);
+}
+
+.auth__forgot {
+  display: block;
+  text-align: left;
+  font-size: var(--fs-small);
+  margin-bottom: var(--space-md);
+}
+
+.auth__divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: var(--fs-small);
+  margin: var(--space-lg) 0;
+}
+.auth__divider::before,
+.auth__divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+.auth__divider span { padding: 0 var(--space-sm); }
+
+.auth__social {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.auth__guest {
+  display: block;
+  margin: 0 auto var(--space-lg);
+}
+
+.auth__switch {
+  text-align: center;
+  font-size: var(--fs-small);
+}
+.auth__switch a {
+  font-weight: var(--fw-bold);
+}

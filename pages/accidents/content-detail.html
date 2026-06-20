@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تفاصيل المحتوى - خطوة أمان</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="./accidents.css">
+</head>
+<body data-page="accidents">
+  <div class="app-frame">
+
+    <header class="top-bar">
+      <button class="btn-text" onclick="goBack()">→ رجوع</button>
+      <span class="top-bar__title">تفاصيل المحتوى</span>
+      <span style="width:24px"></span>
+    </header>
+
+    <main class="screen">
+
+      <div class="detail__media" id="mediaPlaceholder">▶️</div>
+
+      <h2 id="contentTitle">ثانية واحدة غيّرت كل شيء</h2>
+      <p class="detail__date" id="contentDate">نُشر في 12 يونيو 2026</p>
+
+      <p id="contentBody">
+        قصة حقيقية لشاب نجا من حادث مروري خطير بعد لحظة تشتت انتباه واحدة.
+        يروي في هذا المحتوى تفاصيل ما حدث وكيف غيّرت تلك اللحظة نظرته
+        لأهمية الالتزام بقواعد السلامة على الطريق.
+      </p>
+
+      <div class="detail__actions">
+        <button class="btn-text" id="likeBtn">❤️ <span id="likeCount">128</span></button>
+        <button class="btn-text" id="shareBtn">🔗 مشاركة</button>
+        <button class="btn-text" id="saveBtn">🔖 حفظ</button>
+      </div>
+
+      <h3>محتوى مشابه</h3>
+      <div class="related-grid">
+        <a href="./content-detail.html?id=2" class="content-card card card-signature">
+          <div class="content-card__thumb">🎬</div>
+          <div class="content-card__info"><h3>السرعة لا تغفر الأخطاء</h3></div>
+        </a>
+        <a href="./content-detail.html?id=3" class="content-card card card-signature">
+          <div class="content-card__thumb">📖</div>
+          <div class="content-card__info"><h3>قصة من الواقع</h3></div>
+        </a>
+      </div>
+
+      <button class="btn btn-outline" id="shareStoryBtn">شارك تجربتك أو قصتك</button>
+
+    </main>
+
+  </div>
+
+  <script src="../../js/storage.js"></script>
+  <script src="../../js/navigation.js"></script>
+  <script src="./content-detail.js"></script>
+</body>
+</html>

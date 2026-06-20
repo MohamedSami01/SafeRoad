@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حسابي - خطوة أمان</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="./account.css">
+</head>
+<body data-page="account">
+  <div class="app-frame">
+
+    <header class="top-bar">
+      <span class="top-bar__title">حسابي</span>
+      <button class="top-bar__icon-btn" onclick="location.href='./settings.html'" aria-label="الإعدادات">⚙️</button>
+    </header>
+
+    <main class="screen">
+
+      <section class="profile-header">
+        <div class="profile-avatar" aria-hidden="true">🧑</div>
+        <h2 id="profileName">مستخدم</h2>
+        <span class="badge badge-primary" id="profileLevel">واعي</span>
+        <button class="btn-text" id="editProfileBtn">تعديل الملف الشخصي</button>
+      </section>
+
+      <section class="points-summary card card-signature">
+        <div class="points-summary__total">
+          <strong id="totalPoints">0</strong>
+          <span>نقطة</span>
+        </div>
+        <div class="points-summary__level">
+          <div class="progress-track"><div class="progress-fill" id="levelProgress"></div></div>
+          <p id="nextLevelText"></p>
+        </div>
+      </section>
+
+      <h3>شاراتي</h3>
+      <div class="badges-grid">
+        <div class="badge-item card">🏅<span>مكتمل التوعية</span></div>
+        <div class="badge-item card">🚦<span>خبير سلامة</span></div>
+        <div class="badge-item card is-locked">🔒<span>سفير أمان</span></div>
+      </div>
+
+      <h3>شهاداتي</h3>
+      <div class="certs-list" id="certsList"></div>
+
+      <h3>بلاغاتي</h3>
+      <a href="../reporting/reports-history.html" class="reports-link card">
+        <span>عرض كل بلاغاتي السابقة</span>
+        <span>←</span>
+      </a>
+
+    </main>
+
+    <div class="profile-modal" id="editProfileModal" role="dialog" aria-modal="true">
+      <form class="profile-modal__content" id="editProfileForm">
+        <h3>تعديل الملف الشخصي</h3>
+        <label>الاسم<input class="form-input" id="editName" required maxlength="40"></label>
+        <label>البريد أو الهاتف<input class="form-input" id="editIdentifier"></label>
+        <div class="profile-modal__actions">
+          <button type="button" class="btn btn-outline" id="cancelEditProfile">إلغاء</button>
+          <button type="submit" class="btn btn-primary">حفظ</button>
+        </div>
+      </form>
+    </div>
+
+    <nav class="bottom-nav">
+      <button class="bottom-nav__item" data-page="home" data-href="../home/home.html">
+        <span class="bottom-nav__icon">🏠</span><span>الرئيسية</span>
+      </button>
+      <button class="bottom-nav__item" data-page="accidents" data-href="../accidents/accidents-home.html">
+        <span class="bottom-nav__icon">🚦</span><span>الحوادث</span>
+      </button>
+      <button class="bottom-nav__item" data-page="addiction" data-href="../addiction/addiction-home.html">
+        <span class="bottom-nav__icon">🛡️</span><span>الإدمان</span>
+      </button>
+      <button class="bottom-nav__item" data-page="help" data-href="../help/help-map.html">
+        <span class="bottom-nav__icon">📍</span><span>المساعدة</span>
+      </button>
+      <button class="bottom-nav__item" data-page="account" data-href="./profile.html">
+        <span class="bottom-nav__icon">👤</span><span>حسابي</span>
+      </button>
+    </nav>
+
+  </div>
+
+  <script src="../../js/storage.js"></script>
+  <script src="../../js/navigation.js"></script>
+  <script src="./account.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+/* ==========================================================================
+   Design Tokens - خطوة أمان (Khotwat Amaan)
+   Central source of truth for color, type, spacing, and shape.
+   Every other CSS file should reference these variables, never hardcode values.
+   ========================================================================== */
+
+:root {
+  /* ---------- Color: Brand ---------- */
+  --color-primary: #0d6e6e;          /* teal - trust, safety, calm authority */
+  --color-primary-dark: #094f4f;
+  --color-primary-light: #3d9b9b;
+  --color-secondary: #3d7a6e;        /* muted green - supporting actions */
+
+  /* ---------- Color: Accent / Semantic ---------- */
+  --color-accent: #f4a93a;           /* warm warning amber - road-sign energy */
+  --color-accent-dark: #c97f17;
+  --color-danger: #c0392b;           /* emergency / report red */
+  --color-danger-dark: #962d22;
+  --color-success: #2f9e62;
+
+  /* ---------- Color: Neutrals ---------- */
+  --color-bg: #f7f5f0;               /* warm cream, not cold white */
+  --color-bg-alt: #efeae0;
+  --color-surface: #ffffff;
+  --color-border: #ddd6c5;
+  --color-text: #1a2e2e;
+  --color-text-light: #5c6b6b;
+  --color-text-on-primary: #ffffff;
+
+  /* ---------- Typography ---------- */
+  --font-display: 'Cairo', 'Tahoma', sans-serif;
+  --font-body: 'Tajawal', 'Tahoma', sans-serif;
+
+  --fs-h1: 2rem;
+  --fs-h2: 1.5rem;
+  --fs-h3: 1.2rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-tiny: 0.75rem;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  /* ---------- Spacing scale ---------- */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* ---------- Shape ----------
+     Signature shape: one corner is "cut" like a road sign / caution tag.
+     Used on cards throughout the app via the .card-signature utility. */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --cut-size: 18px;
+
+  /* ---------- Elevation ---------- */
+  --shadow-sm: 0 1px 3px rgba(26, 46, 46, 0.08);
+  --shadow-md: 0 4px 12px rgba(26, 46, 46, 0.10);
+  --shadow-lg: 0 8px 24px rgba(26, 46, 46, 0.14);
+
+  /* ---------- Motion ---------- */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+
+  /* ---------- Layout ---------- */
+  --max-width: 480px;   /* mobile-first app frame, centered on larger screens */
+  --bottom-nav-height: 64px;
+  --top-bar-height: 56px;
+}
+
+/* Respect reduced motion preference globally */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,93 @@
+/* ==========================================================================
+   Base / Reset - خطوة أمان
+   Global resets, typography defaults, and RTL setup.
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  direction: rtl;
+  text-align: right;
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  margin: 0 0 var(--space-sm);
+  line-height: 1.3;
+  color: var(--color-text);
+}
+
+h1 { font-size: var(--fs-h1); font-weight: var(--fw-black); }
+h2 { font-size: var(--fs-h2); font-weight: var(--fw-bold); }
+h3 { font-size: var(--fs-h3); font-weight: var(--fw-bold); }
+
+p { margin: 0 0 var(--space-md); color: var(--color-text-light); }
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+ul, ol { padding-right: var(--space-lg); margin: 0 0 var(--space-md); }
+
+img { max-width: 100%; display: block; }
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, select, textarea {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+}
+
+/* Visible keyboard focus everywhere - accessibility floor */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* App shell: centers the mobile-first frame on wider screens */
+.app-frame {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--color-bg);
+  position: relative;
+  padding-bottom: var(--bottom-nav-height);
+}
+
+.screen {
+  padding: var(--space-md);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

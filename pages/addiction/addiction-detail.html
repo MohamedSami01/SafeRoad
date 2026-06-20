@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تفاصيل توعوية - خطوة أمان</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../accidents/accidents.css">
+  <link rel="stylesheet" href="./addiction.css">
+</head>
+<body data-page="addiction">
+  <div class="app-frame">
+
+    <header class="top-bar">
+      <button class="btn-text" onclick="goBack()">→ رجوع</button>
+      <span class="top-bar__title">محتوى توعوي</span>
+      <span style="width:24px"></span>
+    </header>
+
+    <main class="screen">
+
+      <div class="detail__media" id="mediaPlaceholder">⚠️</div>
+
+      <h2 id="addictionTitle">تأثير المؤثرات على ردة فعل السائق</h2>
+
+      <p>
+        تعاطي بعض المؤثرات يبطئ زمن استجابة السائق بشكل كبير، مما يزيد فرصة
+        وقوع حوادث خطيرة. فيما يلي أهم النقاط التي يجب معرفتها:
+      </p>
+
+      <ul>
+        <li>تقل القدرة على تقدير المسافات والسرعة بدقة.</li>
+        <li>يطول زمن رد الفعل عند الفرملة المفاجئة.</li>
+        <li>يقل التركيز والانتباه للمحيط أثناء القيادة.</li>
+      </ul>
+
+      <div class="fact-box card">
+        <strong>هل تعلم؟</strong>
+        <p>زمن رد الفعل تحت تأثير بعض المؤثرات قد يتضاعف 3 مرات مقارنة بالحالة الطبيعية.</p>
+      </div>
+
+      <div class="detail__cta-group">
+        <button class="btn btn-primary" onclick="location.href='../challenges/quiz-list.html'">
+          اعمل اختبار سريع عن الموضوع
+        </button>
+        <button class="btn btn-outline" onclick="location.href='../help/support-corner.html'">
+          تحتاج مساعدة أو شخص يسمعك؟
+        </button>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="../../js/storage.js"></script>
+  <script src="../../js/navigation.js"></script>
+  <script src="./addiction-detail.js"></script>
+</body>
+</html>

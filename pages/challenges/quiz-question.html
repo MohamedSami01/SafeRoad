@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اختبار توعوي - خطوة أمان</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="./challenges.css">
+</head>
+<body data-page="challenges">
+  <div class="app-frame">
+
+    <header class="top-bar">
+      <button class="btn-text" onclick="goBack()">✕</button>
+      <span class="top-bar__title">سؤال <span id="questionIndex">1</span> من <span id="questionTotal">5</span></span>
+      <span style="width:24px"></span>
+    </header>
+
+    <div class="quiz-progress">
+      <div class="progress-track"><div class="progress-fill" id="quizProgressFill" style="width: 20%"></div></div>
+    </div>
+
+    <main class="screen quiz-question">
+
+      <h2 id="questionText">القيادة تحت تأثير بعض المؤثرات تزيد زمن رد الفعل بمقدار:</h2>
+
+      <div class="quiz-options" id="optionsList">
+        <button class="quiz-option" data-correct="false">لا يوجد تأثير يُذكر</button>
+        <button class="quiz-option" data-correct="true">قد يتضاعف 2-3 مرات</button>
+        <button class="quiz-option" data-correct="false">يتحسن التركيز مؤقتًا</button>
+        <button class="quiz-option" data-correct="false">يعتمد فقط على وزن السائق</button>
+      </div>
+
+      <button class="btn btn-primary" id="nextQuestionBtn" disabled>التالي</button>
+
+    </main>
+
+  </div>
+
+  <script src="../../js/storage.js"></script>
+  <script src="./quiz.js"></script>
+</body>
+</html>

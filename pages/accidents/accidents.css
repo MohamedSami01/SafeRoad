@@ -1,0 +1,83 @@
+/* Accidents Module - shared styles for listing + detail screens */
+
+.tab-panel { display: none; }
+.tab-panel.is-active { display: block; }
+
+.content-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+  text-decoration: none;
+  color: var(--color-text);
+}
+.content-card__thumb {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+.content-card__info h3 {
+  font-size: var(--fs-body);
+  margin-bottom: 4px;
+}
+.content-card__info p {
+  font-size: var(--fs-small);
+  margin: 0;
+}
+
+.tip-item {
+  margin-bottom: var(--space-sm);
+}
+.tip-item summary {
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+}
+.tip-item p {
+  margin: var(--space-sm) 0 0;
+}
+
+.stat-card {
+  text-align: center;
+  margin-bottom: var(--space-md);
+  background: var(--color-bg-alt);
+}
+.stat-card__number {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: var(--fw-black);
+  color: var(--color-primary);
+}
+
+/* ---------- Detail screen ---------- */
+.detail__media {
+  height: 200px;
+  background: var(--color-primary-dark);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: var(--space-md);
+}
+.detail__date {
+  font-size: var(--fs-small);
+  margin-bottom: var(--space-md);
+}
+.detail__actions {
+  display: flex;
+  gap: var(--space-md);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-sm) 0;
+  margin-bottom: var(--space-lg);
+}
+.related-grid {
+  margin-bottom: var(--space-lg);
+}

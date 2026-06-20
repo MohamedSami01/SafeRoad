@@ -1,0 +1,28 @@
+/* Addiction Module - styles specific to this section
+   (re-uses .tabs, .tab-panel, .content-card, .tip-item from accidents.css) */
+
+.recovery-card {
+  background: #f0f8f4;
+  border-color: var(--color-success);
+  margin-bottom: var(--space-md);
+}
+.recovery-card h3 {
+  margin: var(--space-sm) 0;
+}
+
+.help-now-btn {
+  margin-top: var(--space-lg);
+}
+
+.fact-box {
+  background: var(--color-bg-alt);
+  margin: var(--space-md) 0 var(--space-lg);
+}
+.fact-box p { margin: var(--space-xs) 0 0; }
+
+.detail__cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}

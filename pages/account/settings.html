@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الإعدادات - خطوة أمان</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="./settings.css">
+</head>
+<body data-page="account">
+  <div class="app-frame settings-container">
+    <header class="settings-header">
+      <button class="header-back" onclick="goBack()" aria-label="رجوع">→</button>
+      <h1 class="header-title">الإعدادات</h1>
+      <span class="header-spacer"></span>
+    </header>
+
+    <main class="settings-content">
+      <section class="settings-section">
+        <h2 class="section-title">⚙️ عام</h2>
+        <div class="settings-list">
+          <div class="setting-item">
+            <div class="setting-icon">🌐</div>
+            <div class="setting-info"><h3>اللغة</h3><p>لغة واجهة التطبيق</p></div>
+            <select class="setting-select" id="languageSelect" aria-label="اللغة">
+              <option value="ar">العربية</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <h2 class="section-title">🔔 الإشعارات</h2>
+        <div class="settings-list">
+          <div class="setting-item"><div class="setting-icon">🎯</div><div class="setting-info"><h3>تذكير تحدي اليوم</h3><p>إشعار يومي بالتحدي</p></div><label class="switch"><input type="checkbox" id="dailyChallengeNotif" checked><span class="slider"></span></label></div>
+          <div class="setting-item"><div class="setting-icon">🚨</div><div class="setting-info"><h3>تنبيهات الطوارئ</h3><p>إشعارات الحوادث والطوارئ</p></div><label class="switch"><input type="checkbox" id="emergencyNotif" checked><span class="slider"></span></label></div>
+          <div class="setting-item"><div class="setting-icon">📢</div><div class="setting-info"><h3>تحديثات الحملات</h3><p>حملات توعوية جديدة</p></div><label class="switch"><input type="checkbox" id="campaignsNotif"><span class="slider"></span></label></div>
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <h2 class="section-title">🔒 الخصوصية</h2>
+        <div class="settings-list">
+          <div class="setting-item"><div class="setting-icon">🕵️</div><div class="setting-info"><h3>إخفاء الاسم في البلاغات</h3><p>إرسال البلاغات كمجهول</p></div><label class="switch"><input type="checkbox" id="anonymousReports" checked><span class="slider"></span></label></div>
+          <div class="setting-item"><div class="setting-icon">🏆</div><div class="setting-info"><h3>إظهار مشاركتي في اللوحة</h3><p>الظهور في لوحة المتصدرين</p></div><label class="switch"><input type="checkbox" id="showLeaderboard" checked><span class="slider"></span></label></div>
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <h2 class="section-title">ℹ️ حول التطبيق</h2>
+        <div class="settings-list">
+          <div class="setting-item"><div class="setting-icon">🛡️</div><div class="setting-info"><h3>خطوة أمان</h3><p>قرارك اليوم.. ينقذ حياة غدًا</p></div></div>
+          <div class="setting-item"><div class="setting-icon">📱</div><div class="setting-info"><h3>إصدار التطبيق</h3><p>1.0.0</p></div></div>
+        </div>
+      </section>
+
+      <section class="settings-section danger-zone">
+        <h2 class="section-title">⚠️ منطقة الخطر</h2>
+        <div class="settings-list">
+          <button class="setting-item danger-item" id="logoutBtn"><div class="setting-icon">🚪</div><div class="setting-info"><h3>تسجيل الخروج</h3><p>الخروج من الحساب الحالي</p></div></button>
+          <button class="setting-item danger-item" id="deleteAccountBtn"><div class="setting-icon">🗑️</div><div class="setting-info"><h3>حذف الحساب</h3><p>حذف جميع البيانات نهائيًا</p></div></button>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal-overlay" id="logoutModal" role="dialog" aria-modal="true" aria-labelledby="logoutTitle">
+      <div class="modal-content"><div class="modal-icon">🚪</div><h2 id="logoutTitle">تسجيل الخروج</h2><p>هل أنت متأكد من رغبتك في تسجيل الخروج؟</p><div class="modal-actions"><button class="btn btn-outline" id="cancelLogout">إلغاء</button><button class="btn btn-danger" id="confirmLogout">تسجيل الخروج</button></div></div>
+    </div>
+    <div class="modal-overlay" id="deleteModal" role="dialog" aria-modal="true" aria-labelledby="deleteTitle">
+      <div class="modal-content"><div class="modal-icon">⚠️</div><h2 id="deleteTitle">حذف الحساب</h2><p>سيتم حذف جميع بياناتك نهائيًا ولا يمكن استرجاعها.</p><div class="modal-actions"><button class="btn btn-outline" id="cancelDelete">إلغاء</button><button class="btn btn-danger" id="confirmDelete">حذف نهائيًا</button></div></div>
+    </div>
+  </div>
+
+  <script src="../../js/storage.js"></script>
+  <script src="../../js/navigation.js"></script>
+  <script src="./settings.js"></script>
+</body>
+</html>

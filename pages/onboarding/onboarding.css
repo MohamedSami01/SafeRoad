@@ -1,0 +1,65 @@
+/* Onboarding Screen - specific styles */
+
+.onboarding {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-lg) var(--space-md);
+  padding-bottom: 0;
+}
+
+.onboarding__skip {
+  align-self: flex-start;
+  margin-bottom: var(--space-lg);
+}
+
+.onboarding__slides {
+  flex: 1;
+  position: relative;
+}
+
+.onboarding__slide {
+  display: none;
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  animation: fadeIn var(--transition-base);
+}
+
+.onboarding__slide.is-active {
+  display: block;
+}
+
+.onboarding__icon {
+  font-size: 4rem;
+  margin-bottom: var(--space-lg);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.onboarding__dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin: var(--space-lg) 0;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-border);
+  transition: background var(--transition-fast), width var(--transition-fast);
+}
+
+.dot.is-active {
+  background: var(--color-primary);
+  width: 24px;
+  border-radius: 4px;
+}
+
+.onboarding__next {
+  margin-bottom: var(--space-xl);
+}

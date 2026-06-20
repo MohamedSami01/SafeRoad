@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مكافحة الإدمان - خطوة أمان</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../accidents/accidents.css">
+  <link rel="stylesheet" href="./addiction.css">
+</head>
+<body data-page="addiction">
+  <div class="app-frame">
+
+    <header class="top-bar">
+      <button class="btn-text" onclick="goBack()">→</button>
+      <span class="top-bar__title">مكافحة الإدمان</span>
+      <span style="width:24px"></span>
+    </header>
+
+    <main class="screen">
+
+      <div class="tabs" role="tablist">
+        <button class="tab is-active" data-tab="awareness">تعرف على الخطر</button>
+        <button class="tab" data-tab="protect">كيف تحمي نفسك</button>
+        <button class="tab" data-tab="recovery">قصص تعافي</button>
+      </div>
+
+      <section class="tab-panel is-active" data-panel="awareness">
+        <a href="../accidents/content-detail.html?type=addiction&id=1" class="content-card card card-signature">
+          <div class="content-card__thumb">⚠️</div>
+          <div class="content-card__info">
+            <h3>تأثير المؤثرات على ردة فعل السائق</h3>
+            <p>كيف تتأثر سرعة استجابتك أثناء القيادة</p>
+          </div>
+        </a>
+        <a href="../accidents/content-detail.html?type=addiction&id=2" class="content-card card card-signature">
+          <div class="content-card__thumb">🚬</div>
+          <div class="content-card__info">
+            <h3>التدخين وصحة الجهاز التنفسي</h3>
+          </div>
+        </a>
+      </section>
+
+      <section class="tab-panel" data-panel="protect">
+        <details class="tip-item card">
+          <summary>كيف تبتعد عن رفقاء السوء؟</summary>
+          <p>اختر بيئة داعمة، وكن صريحًا مع نفسك بشأن العلاقات التي تضغط عليك سلبًا.</p>
+        </details>
+        <details class="tip-item card">
+          <summary>كيف تتعامل مع ضغط الأصدقاء؟</summary>
+          <p>قول "لا" بثقة هو مهارة، وليس ضعفًا. تدرّب عليها في مواقف بسيطة أولًا.</p>
+        </details>
+      </section>
+
+      <section class="tab-panel" data-panel="recovery">
+        <div class="recovery-card card card-signature">
+          <span class="badge badge-primary">قصة تعافي</span>
+          <h3>"استرجعت حياتي بعد 3 سنوات من العلاج"</h3>
+          <p>قصة شاب تجاوز الإدمان وعاد لحياته الطبيعية بدعم أسرته ومركز علاج متخصص.</p>
+        </div>
+      </section>
+
+      <button class="btn btn-danger help-now-btn" onclick="location.href='../help/support-corner.html'">
+        🆘 احتاج مساعدة الآن
+      </button>
+
+    </main>
+
+    <nav class="bottom-nav">
+      <button class="bottom-nav__item" data-page="home" data-href="../home/home.html">
+        <span class="bottom-nav__icon">🏠</span><span>الرئيسية</span>
+      </button>
+      <button class="bottom-nav__item" data-page="accidents" data-href="../accidents/accidents-home.html">
+        <span class="bottom-nav__icon">🚦</span><span>الحوادث</span>
+      </button>
+      <button class="bottom-nav__item" data-page="addiction" data-href="./addiction-home.html">
+        <span class="bottom-nav__icon">🛡️</span><span>الإدمان</span>
+      </button>
+      <button class="bottom-nav__item" data-page="help" data-href="../help/help-map.html">
+        <span class="bottom-nav__icon">📍</span><span>المساعدة</span>
+      </button>
+      <button class="bottom-nav__item" data-page="account" data-href="../account/profile.html">
+        <span class="bottom-nav__icon">👤</span><span>حسابي</span>
+      </button>
+    </nav>
+
+  </div>
+
+  <script src="../../js/storage.js"></script>
+  <script src="../../js/navigation.js"></script>
+  <script src="./addiction.js"></script>
+</body>
+</html>

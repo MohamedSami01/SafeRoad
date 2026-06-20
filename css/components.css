@@ -1,0 +1,228 @@
+/* ==========================================================================
+   Components - خطوة أمان
+   Reusable UI building blocks shared across every screen.
+   ========================================================================== */
+
+/* ---------- Signature card shape ----------
+   One corner is cut at 45deg, echoing a caution-sign tag.
+   Apply alongside .card for the branded look. */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-signature {
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--cut-size)) 0,
+    100% var(--cut-size),
+    100% 100%,
+    0 100%
+  );
+  position: relative;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 12px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-body);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  width: 100%;
+}
+
+.btn:active { transform: scale(0.98); }
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-text-on-primary);
+}
+.btn-primary:hover { background: var(--color-primary-dark); }
+
+.btn-accent {
+  background: var(--color-accent);
+  color: var(--color-text);
+}
+.btn-accent:hover { background: var(--color-accent-dark); }
+
+.btn-danger {
+  background: var(--color-danger);
+  color: #fff;
+}
+.btn-danger:hover { background: var(--color-danger-dark); }
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-text {
+  background: none;
+  color: var(--color-primary);
+  font-weight: var(--fw-medium);
+  width: auto;
+  padding: 8px;
+}
+
+/* ---------- Top bar ---------- */
+.top-bar {
+  height: var(--top-bar-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-md);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.top-bar__title {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h3);
+}
+
+/* ---------- Bottom navigation ---------- */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--max-width);
+  height: var(--bottom-nav-height);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 20;
+}
+
+.bottom-nav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-size: var(--fs-tiny);
+  color: var(--color-text-light);
+  flex: 1;
+  padding: var(--space-xs);
+}
+
+.bottom-nav__item.is-active {
+  color: var(--color-primary);
+  font-weight: var(--fw-bold);
+}
+
+.bottom-nav__icon { font-size: 1.3rem; }
+
+/* ---------- Quick access grid (Home) ---------- */
+.quick-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin: var(--space-md) 0;
+}
+
+.quick-card {
+  text-align: center;
+  padding: var(--space-lg) var(--space-sm);
+  cursor: pointer;
+  transition: box-shadow var(--transition-base);
+}
+.quick-card:hover { box-shadow: var(--shadow-md); }
+.quick-card__icon { font-size: 2rem; margin-bottom: var(--space-sm); }
+.quick-card__label { font-weight: var(--fw-bold); font-size: var(--fs-small); }
+
+/* ---------- Badges / tags ---------- */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: var(--fs-tiny);
+  font-weight: var(--fw-bold);
+}
+.badge-accent { background: #fdf0db; color: var(--color-accent-dark); }
+.badge-primary { background: #e3f0ee; color: var(--color-primary-dark); }
+.badge-danger { background: #fbe4e1; color: var(--color-danger-dark); }
+
+/* ---------- Form elements ---------- */
+.field {
+  margin-bottom: var(--space-md);
+}
+.field label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-small);
+}
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--color-primary);
+}
+
+/* ---------- Progress bar ---------- */
+.progress-track {
+  height: 8px;
+  background: var(--color-bg-alt);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 20px;
+  transition: width var(--transition-base);
+}
+
+/* ---------- Empty state ---------- */
+.empty-state {
+  text-align: center;
+  padding: var(--space-2xl) var(--space-md);
+  color: var(--color-text-light);
+}
+.empty-state__icon { font-size: 2.5rem; margin-bottom: var(--space-sm); }
+
+/* ---------- Tabs ---------- */
+.tabs {
+  display: flex;
+  gap: var(--space-sm);
+  overflow-x: auto;
+  padding-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+.tab {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: var(--color-bg-alt);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  white-space: nowrap;
+  color: var(--color-text-light);
+}
+.tab.is-active {
+  background: var(--color-primary);
+  color: #fff;
+}

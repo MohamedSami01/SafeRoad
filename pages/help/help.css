@@ -1,0 +1,108 @@
+/* Help Module - map, center detail, support corner */
+
+.emergency-bar {
+  display: block;
+  width: 100%;
+  background: var(--color-danger);
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  font-weight: var(--fw-bold);
+  position: sticky;
+  top: var(--top-bar-height);
+  z-index: 9;
+}
+
+.tabs { padding: var(--space-md) var(--space-md) 0; margin-bottom: 0; }
+
+.map-placeholder {
+  height: 180px;
+  background: var(--color-bg-alt);
+  margin: var(--space-md);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-light);
+  font-size: var(--fs-small);
+}
+.map-placeholder__pin {
+  font-size: 2rem;
+  margin-bottom: var(--space-sm);
+}
+
+.help-list { padding-top: 0; }
+
+.center-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+  text-decoration: none;
+  color: var(--color-text);
+}
+.center-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+.center-card__info h3 { font-size: var(--fs-body); margin-bottom: 2px; }
+.center-card__info p { margin: 0; font-size: var(--fs-small); }
+
+/* ---------- Center detail ---------- */
+.center-detail__icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-sm);
+}
+.center-detail__info-block {
+  margin: var(--space-md) 0 var(--space-lg);
+}
+.info-row {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+.info-row:last-child { margin-bottom: 0; }
+.info-row__icon { font-size: 1.3rem; }
+.info-row p { margin: 2px 0 4px; }
+
+/* ---------- Support corner ---------- */
+.support-welcome {
+  background: linear-gradient(135deg, #eef6f5, #e3f0ee);
+  border-color: var(--color-primary-light);
+  margin-bottom: var(--space-lg);
+}
+.support-welcome p { color: var(--color-text); margin: 0; }
+
+.helpline-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+.helpline-card p { margin: 2px 0 0; font-size: var(--fs-small); }
+.helpline-card__btn { width: auto; padding: 10px 18px; }
+
+.anonymous-contact {
+  display: block;
+  text-align: center;
+  background: var(--color-bg-alt);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+  margin: var(--space-lg) 0 var(--space-sm);
+}
+
+.privacy-note {
+  font-size: var(--fs-tiny);
+  text-align: center;
+}
