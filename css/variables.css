@@ -74,6 +74,17 @@
   --top-bar-height: 56px;
 }
 
+/* ---------- Dark theme overrides ---------- */
+[data-theme="dark"] {
+  --color-bg: #121212;
+  --color-bg-alt: #1e1e1e;
+  --color-surface: #1a1a2e;
+  --color-border: #333355;
+  --color-text: #e0e0e0;
+  --color-text-light: #a0a0b0;
+  --color-text-on-primary: #ffffff;
+}
+
 /* Respect reduced motion preference globally */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

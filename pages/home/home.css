@@ -1,22 +1,5 @@
 /* Home Dashboard - specific styles */
 
-.top-bar__actions {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-}
-
-.top-bar__icon-btn {
-  font-size: 1.2rem;
-  background: var(--color-bg-alt);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .home__banner {
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
   color: #fff;
@@ -36,12 +19,35 @@
   color: #fff;
 }
 
+.quick-grid .border-glow-card {
+  min-height: 180px;
+}
+
 .quick-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: var(--color-text);
+  height: 100%;
+  text-align: center;
+  gap: var(--space-sm);
+}
+
+.quick-card__icon {
+  font-size: 3.5rem;
+  transition: transform 0.3s ease;
+}
+
+.border-glow-card:hover .quick-card__icon {
+  transform: scale(1.1);
+}
+
+.quick-card__sub {
+  margin: 0;
+  font-size: var(--fs-small);
+  color: var(--color-text-light);
 }
 
 .home__challenge {

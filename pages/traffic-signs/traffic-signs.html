@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>تفاصيل توعوية - خطوة أمان</title>
+  <title>اختبار إشارات المرور - خطوة أمان</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../css/variables.css">
   <link rel="stylesheet" href="../../css/base.css">
   <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/pill-nav.css">
   <link rel="stylesheet" href="../../css/toggle.css">
-  <link rel="stylesheet" href="../accidents/accidents.css">
-  <link rel="stylesheet" href="./addiction.css">
+  <link rel="stylesheet" href="./traffic-signs.css">
 </head>
-<body data-page="addiction">
+<body data-page="traffic-signs">
   <div class="app-frame">
 
     <header class="top-bar">
-      <button class="btn-text" onclick="goBack()">→ رجوع</button>
-      <span class="top-bar__title">محتوى توعوي</span>
-<div class="toggle-cont">
+      <button class="btn-text" onclick="goBack()">→</button>
+      <span class="top-bar__title">🚦 اختبار إشارات المرور</span>
+      <div class="toggle-cont">
   <input class="toggle-input" id="themeToggle" name="themeToggle" type="checkbox" />
   <label class="toggle-label" for="themeToggle">
     <div class="cont-icon">
@@ -57,42 +57,105 @@
 
     <main class="screen">
 
-      <div class="detail__media" id="mediaPlaceholder">⚠️</div>
+      <!-- Intro / Category Selection -->
+      <section id="quizIntro" class="traffic-quiz-intro">
+        <h2>🚦 اختبار إشارات المرور</h2>
+        <p>اختبر معرفتك بإشارات المرور وكن سائقًا أكثر أمانًا</p>
 
-      <h2 id="addictionTitle">تأثير المؤثرات على ردة فعل السائق</h2>
+        <div class="category-selection">
+          <h3>اختر التصنيف:</h3>
+          <div class="category-grid">
+            <button class="category-btn is-active" data-category="all">
+              <span class="category-btn__icon">🚦</span>
+              <span class="category-btn__name">الكل</span>
+            </button>
+            <button class="category-btn" data-category="إشارات تنظيمية">
+              <span class="category-btn__icon">⭕</span>
+              <span class="category-btn__name">تنظيمية</span>
+            </button>
+            <button class="category-btn" data-category="إشارات تحذيرية">
+              <span class="category-btn__icon">⚠️</span>
+              <span class="category-btn__name">تحذيرية</span>
+            </button>
+            <button class="category-btn" data-category="إشارات إرشادية">
+              <span class="category-btn__icon">ℹ️</span>
+              <span class="category-btn__name">إرشادية</span>
+            </button>
+            <button class="category-btn" data-category="إشارات مؤقتة">
+              <span class="category-btn__icon">🚧</span>
+              <span class="category-btn__name">مؤقتة</span>
+            </button>
+          </div>
+        </div>
 
-      <p>
-        تعاطي بعض المؤثرات يبطئ زمن استجابة السائق بشكل كبير، مما يزيد فرصة
-        وقوع حوادث خطيرة. فيما يلي أهم النقاط التي يجب معرفتها:
-      </p>
+        <button class="start-quiz-btn" id="startQuizBtn">ابدأ الاختبار</button>
+      </section>
 
-      <ul>
-        <li>تقل القدرة على تقدير المسافات والسرعة بدقة.</li>
-        <li>يطول زمن رد الفعل عند الفرملة المفاجئة.</li>
-        <li>يقل التركيز والانتباه للمحيط أثناء القيادة.</li>
-      </ul>
+      <!-- Quiz Screen -->
+      <section id="quizScreen" class="quiz-screen visually-hidden">
+        <div class="quiz-header">
+          <div class="quiz-header__progress">
+            <span>السؤال <strong id="qIndex">1</strong> من <strong id="qTotal">10</strong></span>
+            <div class="quiz-header__bar">
+              <div class="quiz-header__fill" id="qFill" style="width: 10%"></div>
+            </div>
+          </div>
+          <div class="quiz-header__score">🏆 <span id="qScore">0</span></div>
+        </div>
 
-      <div class="fact-box card">
-        <strong>هل تعلم؟</strong>
-        <p>زمن رد الفعل تحت تأثير بعض المؤثرات قد يتضاعف 3 مرات مقارنة بالحالة الطبيعية.</p>
-      </div>
+        <div class="question-card">
+          <div class="sign-display">
+            <div class="sign-image">
+              <span class="sign-image__emoji" id="signEmoji">🛑</span>
+            </div>
+            <div class="sign-tags">
+              <span class="sign-tag" id="signCategory">إشارات تنظيمية</span>
+              <span class="sign-tag" id="signShape">دائرة</span>
+              <span class="sign-tag" id="signColor">أحمر</span>
+            </div>
+          </div>
 
-      <div class="detail__cta-group">
-        <button class="btn btn-primary" onclick="location.href='../challenges/quiz-list.html'">
-          اعمل اختبار سريع عن الموضوع
-        </button>
-        <button class="btn btn-outline" onclick="location.href='../help/support-corner.html'">
-          تحتاج مساعدة أو شخص يسمعك؟
-        </button>
-      </div>
+          <h3 class="question-text" id="questionText">ماذا تعني هذه الإشارة؟</h3>
+
+          <div class="answers-list" id="answersContainer"></div>
+
+          <div id="explanationBox" class="explanation-box visually-hidden">
+            <h4>💡 الشرح:</h4>
+            <p class="explanation-text"></p>
+            <p class="next-hint">السؤال التالي خلال ثوانٍ...</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Result Screen -->
+      <section id="quizResult" class="result-screen visually-hidden">
+        <div class="result-screen__icon" id="resultIcon">🎉</div>
+        <h2>النتيجة</h2>
+        <p class="result-screen__score">
+          <span id="resultScore">0 من 0</span>
+        </p>
+        <p class="result-screen__detail">
+          النسبة: <strong id="resultPct">0%</strong>
+        </p>
+        <p id="resultMsg"></p>
+        <div class="points-earned card card-signature" style="margin: var(--space-md) 0;">
+          <span>النقاط المكتسبة</span>
+          <strong id="pointsEarned" style="color: var(--color-accent); font-size: var(--fs-h2);">+0</strong>
+        </div>
+        <div class="result-actions">
+          <button class="btn btn-accent" id="retryBtn">🔁 اختبار آخر</button>
+          <button class="btn btn-outline" onclick="location.href='../home/home.html'">🏠 العودة للرئيسية</button>
+        </div>
+      </section>
 
     </main>
 
   </div>
 
   <script src="../../js/storage.js"></script>
+  <script src="../../js/traffic-signs-data.js"></script>
   <script src="../../js/navigation.js"></script>
-  <script src="./addiction-detail.js"></script>
+  <script src="./traffic-signs.js"></script>
   <script src="../../js/theme.js"></script>
 </body>
 </html>

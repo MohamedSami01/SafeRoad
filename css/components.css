@@ -93,41 +93,6 @@
   font-size: var(--fs-h3);
 }
 
-/* ---------- Bottom navigation ---------- */
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: var(--max-width);
-  height: var(--bottom-nav-height);
-  background: var(--color-surface);
-  border-top: 1px solid var(--color-border);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  z-index: 20;
-}
-
-.bottom-nav__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  font-size: var(--fs-tiny);
-  color: var(--color-text-light);
-  flex: 1;
-  padding: var(--space-xs);
-}
-
-.bottom-nav__item.is-active {
-  color: var(--color-primary);
-  font-weight: var(--fw-bold);
-}
-
-.bottom-nav__icon { font-size: 1.3rem; }
-
 /* ---------- Quick access grid (Home) ---------- */
 .quick-grid {
   display: grid;

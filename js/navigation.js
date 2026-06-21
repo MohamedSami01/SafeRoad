@@ -5,7 +5,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  const navItems = document.querySelectorAll('.bottom-nav__item');
+  const navItems = document.querySelectorAll('.pill');
 
   navItems.forEach((item) => {
     item.addEventListener('click', () => {
